@@ -2,4 +2,184 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--font);
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 23.4px;
+}
+
+.header {
+  min-block-size: 100vh;
+  padding: 10px;
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  font-weight: bold;
+  line-height: 82.5%;
+}
+
+.header__theme-menu-list {
+  margin-top: 65px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  color: var(--button-color);
+  text-transform: lowercase;
+  background-color: transparent;
+  border: none;
+  min-inline-size: 70px;
+  min-block-size: 26px;
+  padding: auto;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-color);
+}
+
+.header__description {
+  background-color: var(--accent-color);
+  color: var(--description-color);
+  font-weight: bold;
+  max-height: min-content;
+  justify-self: end;
+  align-self: center;
+}
+
+.decor {
+  position: absolute;
+  right: 9px;
+  top: 10px;
+}
+
+.decor::before {
+  position: absolute;
+  content: "REС";
+  text-align: center;
+  color: var(--accent-color);
+  line-height: 25px;
+  right: 28px;
+  font-family: var(--font);
+}
+
+.decor::after {
+  position: absolute;
+  content: "";
+  top: 8px;
+  right: 9px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  background-color: var(--accent-color);
+  min-height: 9px;
+  min-width: 9px;
+}
+
+.decorated-section::after {
+  content: "";
+  position: absolute;
+  border-inline-end: 1px solid var(--border-color, #ff0070);
+  border-block-start: 1px solid var(--border-color, #ff0070);
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 10px;
+}
+
+.decorated-section::before {
+  content: "";
+  position: absolute;
+  border-inline-start: 1px solid var(--border-color, #ff0070);
+  border-block-end: 1px solid var(--border-color, #ff0070);
+  bottom: 10px;
+  width: 25px;
+  height: 25px;
+  left: 10px;
+
+}
+
+.main {
+  padding: 40px 10px;
+}
+
+.section__title {
+  font-size: 18px;
+  color: var(--section-title-color);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.article__title {
+  background-color: var(--accent-color);
+  margin: 20px 0 10px;
+  color: var(--article-title-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.article__description {
+  color: var(--article-text-color);
+}
+
+.section__subtitle {
+  background-color: var(--accent-color);
+  margin-bottom: 10px;
+  color: var(--article-title-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.section__how-article-title {
+  font-weight: normal;
+}
+
+.section__gallery-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.section__gallery-image {
+  width: 100%;
+}
+
+.footer {
+  padding: 0 10px;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__title {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+  font-weight: bold;
+  line-height: 82.5%;
 }
