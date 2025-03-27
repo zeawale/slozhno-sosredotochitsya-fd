@@ -17,4 +17,6 @@
   --section-title-color: #FF0070;
   --button-color: #FF0070;
   --border-color: #FF0070;
+  --border-color-hover: rgb(255, 0, 112, 0.4);
+  --link-border: #F1B2CE;
 }

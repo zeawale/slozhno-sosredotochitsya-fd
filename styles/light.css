@@ -19,14 +19,27 @@
   --article-text-color: #353430;
   --button-color: #353430;
   --border-color: #353430;
-}
-
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+  --border-color-hover: rgb(50, 49, 45, 0.4);
+  --link-border: #353430;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    /* Дублируем переменные светлой темы */    
+    --bg-color: #FFF1F7;
+    --bg-image: url(../images/cover-image-light.png);
+    --title-color: #FFC2E6;
+    --accent-color: #FF8DCB;
+    --section-title-color: #353430;
+    --article-title-color: #353430;
+    --description-color: #353430;
+    --article-text-color: #353430;
+    --button-color: #353430;
+    --border-color: #353430;  
+    --border-color-hover: rgb(50, 49, 45, 0.4);
+    --link-border: #353430;
   }
+}
+
+.theme-light .decor {
+  display: none;
 }

@@ -16,15 +16,24 @@
   --article-title-color: #000028;
   --description-color: #000028;
   --article-text-color: #F1B2CE;
+  --border-color-hover: rgb(255, 0, 112, 0.4);
+  --link-border: #F1B2CE;
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  --bg-color: #000028;
-  --bg-image: url(../images/cover-image-dark.png);
-  --title-color: #DB00FF;
-  --accent-color: #FF0070;
-  --article-title-color: #000028;
-  --description-color: #000028;
-  --article-text-color: #F1B2CE;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #000028;
+    --bg-image: url(../images/cover-image-dark.png);
+    --title-color: #DB00FF;
+    --accent-color: #FF0070;
+    --article-title-color: #000028;
+    --description-color: #000028;
+    --article-text-color: #F1B2CE; 
+    --border-color-hover: rgb(255, 0, 112, 0.4);
+    --link-border: #F1B2CE;
+  }
+}
+
+.theme-dark .decor {
+  display: flex;
 }
