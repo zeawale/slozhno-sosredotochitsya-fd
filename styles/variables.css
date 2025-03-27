@@ -5,6 +5,7 @@
 
 :root {
   --font: 'IBM Plex mono', sans-serif;
+  --padding: 10px;
   /* Переменные тёмной темы */
   --bg-color: #000028;
   --bg-image: url(../images/cover-image-dark.png);
@@ -15,4 +16,5 @@
   --article-text-color: #F1B2CE;
   --section-title-color: #FF0070;
   --button-color: #FF0070;
+  --border-color: #FF0070;
 }
