@@ -38,6 +38,10 @@
     --border-color-hover: rgb(50, 49, 45, 0.4);
     --link-border: #353430;
   }
+
+  .decor {
+    display: none;
+  }
 }
 
 .theme-light .decor {

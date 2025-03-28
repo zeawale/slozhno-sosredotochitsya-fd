@@ -17,11 +17,12 @@
 .header {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr min-content 1fr;
   align-items: center;
   margin-bottom: 40px;
   padding: var(--padding);
-  min-block-size: 100vh;
+  min-block-size: 668px;
+  block-size: 100vh;
 }
 
 .header__title {
@@ -42,9 +43,10 @@
 
 .header__theme-menu-button {
   border: none;
-  padding: auto;
   color: var(--button-color);
   line-height: 18px;
+  padding: 0;
+  padding-bottom: 2.5px;
   text-transform: lowercase;
   background-color: transparent;
   cursor: pointer;
@@ -58,7 +60,6 @@
 
 .header__description {
   justify-self: end;
-  align-self: center;
   max-height: min-content;
   color: var(--description-color);
   font-weight: bold;
@@ -134,10 +135,12 @@
 
 .article {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .article__title {
-  margin-bottom: 10px;
   color: var(--article-title-color);
   font-weight: bold;
   font-size: 18px;
@@ -149,7 +152,7 @@
 }
 
 .section__subtitle {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: var(--article-title-color);
   font-weight: bold;
   font-size: 18px;
@@ -187,7 +190,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-block-size: 668px;
+  block-size: 100vh;
   padding: var(--padding);
 }
 
@@ -257,6 +261,8 @@
     grid-column: 2;
     grid-row: 3; 
     margin-left: 10px;
+    align-self: center;
+    margin-top: 0;
   }
 
   .section__what .section__title {
